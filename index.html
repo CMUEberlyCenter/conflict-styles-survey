@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>Conflict Styles Survey</title>
+	<link href="jquery-ui.css" rel="stylesheet">
+	<style>
+	body{
+		font-family: "Trebuchet MS", sans-serif;
+		margin: 50px;
+	}
+        form li { margin: 15px 0; }
+        #response,
+        #error-message { display: none; }
+
+        #response {
+        border: 1px solid #999999;
+        padding: 20px;
+        float: left;
+        }
+
+        .fakewindowcontain .ui-widget-overlay {
+        position: absolute;
+        }
+
+        #response img { float: left; margin-right: 20px; width: 200px; margin-bottom: 100px;}
+        #response .conflict-style { float: left; clear: left;}
+        hr { float: left; width: 100%;}
+        #response h1 { color: #000099; }
+        
+        #submit { margin-top: 20px; }
+        .radioset.ui-state-error { padding: 1em; }
+
+        .followup { float: left; margin-bottom: 50px;}
+        .radioset-feedback { width: 100%; margin-bottom: 20px;}
+        #nofollowup,
+        #followup-followup {
+        display: none;
+        float: left;
+        }
+        textarea,
+        #feedback2 { float: left; clear: left; }
+
+
+	</style>
+</head>
+<body>
+
+<h1>Conflict Styles Survey</h1>
+
+<div>
+  <p>
+    The following 5-minute test will help shed light on your personal
+    style(s) in dealing with conflicts. It asks you to choose within
+    pairs of possible responses to conflict.
+  </p>
+
+  <p>
+    Think about how you deal with group project team members as you
+    choose the “A” or “B” response for each pair.  (You may respond to
+    conflict with team members differently than you do with friends or
+    family.)
+  </p>
+
+  <p>
+    In some pairs, neither “A” nor “B” may seem very appropriate; try
+    to choose your more likely responses.
+  </p>
+</div>
+
+<div id="error-message" class="ui-state-error ui-corner-all" style="padding: 0 .7em;">
+  <p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
+    <strong>Alert:</strong> Please select answers for highlighted questions.</p>
+</div>
+
+<form class="survey" style="margin-top: 1em;">
+  <ol>
+    <li>
+      <div class="radioset">
+        <input type="radio" id="1A" value="A" name="q1"><label for="1A">Differences are not always worth worrying about.</label>
+        <input type="radio" id="1B" value="B" name="q1"><label for="1B">I make an effort to get my way.</label>
+      </div>
+    </li>
+
+    <li>
+      <div class="radioset">
+        <input type="radio" id="2A" value="A" name="q2"><label for="2A">I try to find a compromise solution.</label>
+        <input type="radio" id="2B" value="B" name="q2"><label for="2B">I may sacrifice my own wishes for the wishes of another.</label>
+      </div>
+    </li>
+
+    <li>
+      <div class="radioset">
+        <input type="radio" id="3A" value="A" name="q3"><label for="3A">I try to win my position.</label>
+        <input type="radio" id="3B" value="B" name="q3"><label for="3B">Sometimes I let others take responsibility for solving the problem.</label>
+      </div>
+    </li>
+
+    <li>
+      <div class="radioset">
+        <input type="radio" id="4A" value="A" name="q4"><label for="4A">I try to do what is necessary to avoid tension.</label>
+        <input type="radio" id="4B" value="B" name="q4"><label for="4B">I seek other’s help in working out a solution.</label>
+      </div>
+    </li>
+
+    <li>
+      <div class="radioset">
+        <input type="radio" id="5A" value="A" name="q5"><label for="5A">I give up some points in exchange for others.</label>
+        <input type="radio" id="5B" value="B" name="q5"><label for="5B">I assert my wishes.</label>
+      </div>
+    </li>
+
+    <li>
+      <div class="radioset">
+        <input type="radio" id="6A" value="A" name="q6"><label for="6A">I try to not hurt the other’s feelings. </label>
+        <input type="radio" id="6B" value="B" name="q6"><label for="6B">I attempt to deal with all of her and my concerns.</label>
+      </div>
+    </li>
+
+    <li>
+      <div class="radioset">
+        <input type="radio" id="7A" value="A" name="q7"><label for="7A">I offer rewards so the other will comply with my wishes.</label>
+        <input type="radio" id="7B" value="B" name="q7"><label for="7B">I assume that in a conflict all parties may be able to come out winners.</label>
+      </div>
+    </li>
+
+    <li>
+      <div class="radioset">
+        <input type="radio" id="8A" value="A" name="q8"><label for="8A">I ask for more than I expect to get.</label>
+        <input type="radio" id="8B" value="B" name="q8"><label for="8B">If it makes him happy, I let him maintain his views.</label>
+      </div>
+    </li>
+
+    <li>
+      <div class="radioset">
+        <input type="radio" id="9A" value="A" name="q9"><label for="9A">I try to surface all her concerns.</label>
+        <input type="radio" id="9B" value="B" name="q9"><label for="9B">I sometimes avoid taking a position which would create controversy.</label>
+      </div>
+    </li>
+
+    <li>
+      <div class="radioset">
+        <input type="radio" id="10A" value="A" name="q10"><label for="10A">I propose a middle ground.</label>
+        <input type="radio" id="10B" value="B" name="q10"><label for="10B">I seek others’ help in working out a solution.</label>
+      </div>
+    </li>
+
+    <li>
+      <div class="radioset">
+        <input type="radio" id="11A" value="A" name="q11"><label for="11A">I use whatever authority I have to convince the other of my position.</label>
+        <input type="radio" id="11B" value="B" name="q11"><label for="11B">I try to find a fair combination of gains and losses for both of us.</label>
+      </div>
+    </li>
+
+    <li>
+      <div class="radioset">
+        <input type="radio" id="12A" value="A" name="q12"><label for="12A">I try to avoid creating unpleasantness.</label>
+        <input type="radio" id="12B" value="B" name="q12"><label for="12B">I try to soothe others’ feelings and preserve the relationship.</label>
+      </div>
+    </li>
+
+    <li>
+      <div class="radioset">
+        <input type="radio" id="13A" value="A" name="q13"><label for="13A">In conflict, everybody comes out with something, though not all that was expected.</label>
+        <input type="radio" id="13B" value="B" name="q13"><label for="13B">I am concerned with satisfying all our wishes.</label>
+      </div>
+    </li>
+
+    <li>
+      <div class="radioset">
+        <input type="radio" id="14A" value="A" name="q14"><label for="14A">I don’t let others abuse my rights.</label>
+        <input type="radio" id="14B" value="B" name="q14"><label for="14B">In a conflict, I may sacrifice my wishes for those of another.</label>
+      </div>
+    </li>
+
+    <li>
+      <div class="radioset">
+        <input type="radio" id="15A" value="A" name="q15"><label for="15A">I try to postpone the issue until I have time to think it over carefully.</label>
+        <input type="radio" id="15B" value="B" name="q15"><label for="15B">If it means more to the other, I let him maintain his position.</label>
+      </div>
+    </li>
+
+    <li>
+      <div class="radioset">
+        <input type="radio" id="16A" value="A" name="q16"><label for="16A">I invite the other to join with me to deal with the differences between us.</label>
+        <input type="radio" id="16B" value="B" name="q16"><label for="16B">I assert my rights.</label>
+      </div>
+    </li>
+
+    <li>
+      <div class="radioset">
+        <input type="radio" id="17A" value="A" name="q17"><label for="17A">I will make an effort to go along with what the other wants.</label>
+        <input type="radio" id="17B" value="B" name="q17"><label for="17B">I attempt to get all concerns and issues out in the open.</label>
+      </div>
+    </li>
+
+    <li>
+      <div class="radioset">
+        <input type="radio" id="18A" value="A" name="q18"><label for="18A">Differences are not always worth worrying about.</label>
+        <input type="radio" id="18B" value="B" name="q18"><label for="18B">In a conflict, everyone should get part of what they want.</label>
+      </div>
+    </li>
+
+    <li>
+      <div class="radioset">
+        <input type="radio" id="19A" value="A" name="q19"><label for="19A">To keep peace, I will sacrifice my wishes for those of the other.</label>
+        <input type="radio" id="19B" value="B" name="q19"><label for="19B">It’s more important to be right than to be friendly.</label>
+      </div>
+    </li>
+
+    <li>
+      <div class="radioset">
+        <input type="radio" id="20A" value="A" name="q20"><label for="20A">I try to do whatever is necessary to avoid tension.</label>
+        <input type="radio" id="20B" value="B" name="q20"><label for="20B">I assume each of us must give up something for the good of whole.</label>
+      </div>
+    </li>
+  </ol>
+      
+  <button id="submit">Submit Responses</button>
+</form>
+
+
+<div id="response" class="ui-corner-all">
+
+
+
+  <h1>Here's how you scored on the five conflict styles:</h1>
+  <div style="position: relative; width: 96%; padding:1% 2%; overflow:hidden;" class="fakewindowcontain">
+    <div class="ui-widget-overlay ui-front"></div>
+    <div style="left: 50px; top: 30px; padding: 1.2em" class="ui-widget ui-front ui-widget-content ui-corner-all ui-widget-shadow">
+  <ul>
+    <li>Avoid: <span class="avo">0</span></li>
+    <li>Force: <span class="for">0</span></li>
+    <li>Accomodate: <span class="acc">0</span></li>
+    <li>Collaborate: <span class="col">0</span></li>
+    <li>Compromise: <span class="com">0</span></li>
+  </ul>
+    </div>
+    </div>
+
+  <p>
+    With these scores in mind, read the following descriptions and see
+    whether your score on the test aligns with how you think you
+    usually handle conflict with other members of project teams. Do
+    you have one or two dominant approaches, or are your scores mixed?
+    Please keep in mind that there is no ‘best’ way to handle
+    conflicts, a point that we will explore in the next module on
+    Basic Conflict Communication.
+  </p>
+  
+
+  <hr/>
+  <div id="avo" class="conflict-style">
+    <img src="images/avo.png" title="Avoiding">
+    <h1>Avoiding</h1>
+    <p>
+      Like a turtle retreating into a shell, when you are in a
+      conflict and are angry or upset you tend to withdraw, act as if
+      nothing is wrong, or refuse to engage. You hide from the
+      problem, ignore it and hope it will go away. You may believe
+      that talking to the other person is a confrontation that is not
+      worth the risk. You view conflict as something to be shunned at
+      all costs, even at the expense of your goals or the
+      relationship. If you and the other person both want the last
+      orange, you leave the kitchen.
+    </p>
+  </div>
+  <hr/>
+  <div id="for" class="conflict-style">
+    <img src="images/for.png" title="Forcing">
+    <h1>Forcing</h1>
+    <p>
+      Like a machine that can move whatever stands in its way, when
+      you are in a conflict, you do everything you can to win or to
+      get your way. You will pursue your own goals even at the expense
+      of the relationship. You view conflict as a win or lose
+      situation. If you and the other person both want the last
+      orange, you explain that you need and deserve the whole thing.
+    </p>
+  </div>
+  <hr/>
+  <div id="acc" class="conflict-style">
+    <img src="images/acc.png" title="Accomodating">
+    <h1>Accomodating</h1>
+    <p>
+      Like a soft smiling teddy bear, this style tries to please
+      everyone. When you are in a conflict you don’t want to hurt the
+      other person’s feelings or make anyone uncomfortable, including
+      yourself. Even while you are willing to discuss conflicts with
+      the other people involved, you believe that conflict damages
+      relationships. You will give up your goal and let the other
+      person have his or her way in order to maintain the
+      relationship. If both of you want the last orange, you will
+      gracefully hand it over.
+    </p>
+    </div>
+  <hr/>
+  <div id="col" class="conflict-style fakewindowcontain">
+    <img src="images/col.png" title="Collaborating">
+    <h1>Collaborating</h1>
+    <p>
+      This style assumes there is a way to satisfy everyone if you
+      look hard enough. When you are in a conflict, you talk about it
+      with the other person to try to find a win/win. You try to
+      maintain and improve relationships by meeting the needs of the
+      other person as well as your own. You are willing to spend time
+      to understand the other person’s perspective and to clearly
+      explain your own. If you both want the last orange, you hold a
+      meeting about why you each need it and explore all the options.
+    </p>
+    </div>
+  <hr/>
+  <div id="com" class="conflict-style">
+    <img src="images/com.png" title="Compromisng">
+    <h1>Comproming</h1>
+    <p>
+      This style tries to be fair in meeting the needs and wants of
+      self and others, giving something to get something in
+      return. When you are in a conflict, you try to settle it
+      quickly, often by splitting the difference. Your objective in a
+      conflict is to find an expedient solution that everyone can live
+      with, even if they are not totally satisfied. If two people want
+      the last orange, you get a knife.
+    </p>
+    </div>
+
+
+  <hr/>
+  <div class="followup">
+    <form style="margin-top: 1em;">
+      
+      <p>
+        Based on these descriptions, how do your scores on the survey align with your own subjective view of your conflict style?
+      </p>
+      <div class="radioset-feedback">
+        <input type="radio" id="f1" value="Very well" name="follow"><label for="f1">Very well</label>
+        <input type="radio" id="f2" value="About right" name="follow"><label for="f2">About right</label>
+        <input type="radio" id="f3" value="So-so" name="follow"><label for="f3">So-so</label>
+        <input type="radio" id="f4" value="More wrong than right" name="follow"><label for="f4">More wrong than right</label>
+        <input type="radio" id="f5" value="Off by a mile" name="follow"><label for="f5">Off by a mile</label>
+      </div>
+
+      <button id="feedback">Submit Feedback</button>
+      
+      <div id="followup-followup">
+        <p>What do you think is/are your dominant style or styles?</p>
+        <textarea rows="4" cols="50"></textarea>
+        <button id="feedback2">Submit Additional Feedback</button>
+      </div>
+      
+  </div>
+  <div id="nofollowup">
+    <p>Thank you for your feedback.</p>
+  </div>
+
+</div>
+
+
+<script src="external/jquery/jquery.js"></script>
+<script src="jquery-ui.js"></script>
+<script>
+
+
+
+
+$( ".radioset" ).buttonset({
+  direction: "vertical"
+});
+
+$( ".radioset-feedback" ).buttonset({
+});
+
+$( function() {
+  $( "#feedback2" ).button();
+  $( "#feedback2" ).click( function( event ) {
+    event.preventDefault();
+    $("#nofollowup").slideDown();
+    $(".followup").slideUp("slow");
+
+  });
+});
+
+
+$( function() {
+  $( "#feedback" ).button();
+  $( "#feedback" ).click( function( event ) {
+   event.preventDefault();
+   if( $("#f3:checked").size() > 0 || $("#f4:checked").size() > 0 || $("#f5:checked").size() > 0) {
+      $("#followup-followup").slideDown();
+      $("#feedback").slideUp("slow");
+    }
+    else {
+      $("#nofollowup").slideDown();
+      $(".followup").slideUp("slow");
+    }
+
+
+    event.preventDefault();
+  });
+});
+
+$( function() {
+  $( "#submit" ).button();
+  $( "#submit" ).click( function( event ) {
+
+  $("html, body").animate({
+    scrollTop: 0
+  }, 1000);
+
+
+
+
+    $('.radioset').each( function() {
+      if( $(this).find("input:checked").size() != 1) {
+        $(this).addClass("ui-state-error ui-corner-all");
+      }
+      else {
+        $(this).removeClass("ui-state-error ui-corner-all");
+      }
+    });
+
+   if( $(".radioset.ui-state-error").size() > 0 ) {
+     $("#error-message").slideDown();
+
+    }
+    else {
+     $("#error-message").hide();
+
+      $("span.avo").text( parseInt($("span.avo").text()) +
+        $('input[name="q1"][value="A"]:checked').size() +
+        $('input[name="q3"][value="B"]:checked').size() +
+        $('input[name="q4"][value="A"]:checked').size() +
+        $('input[name="q9"][value="B"]:checked').size() +
+        $('input[name="q12"][value="A"]:checked').size() +
+        $('input[name="q15"][value="A"]:checked').size() +
+        $('input[name="q18"][value="A"]:checked').size() +
+        $('input[name="q20"][value="A"]:checked').size()
+      );
+
+      $("span.for").text( parseInt($("span.for").text()) +
+        $('input[name="q1"][value="B"]:checked').size() +
+        $('input[name="q3"][value="A"]:checked').size() +
+        $('input[name="q5"][value="B"]:checked').size() +
+        $('input[name="q7"][value="A"]:checked').size() +
+        $('input[name="q11"][value="A"]:checked').size() +
+        $('input[name="q14"][value="A"]:checked').size() +
+        $('input[name="q16"][value="B"]:checked').size() +
+        $('input[name="q19"][value="B"]:checked').size()
+      );
+
+      $("span.acc").text( parseInt($("span.acc").text()) +
+        $('input[name="q2"][value="B"]:checked').size() +
+        $('input[name="q6"][value="A"]:checked').size() +
+        $('input[name="q8"][value="B"]:checked').size() +
+        $('input[name="q12"][value="B"]:checked').size() +
+        $('input[name="q14"][value="B"]:checked').size() +
+        $('input[name="q15"][value="B"]:checked').size() +
+        $('input[name="q17"][value="A"]:checked').size() +
+        $('input[name="q19"][value="A"]:checked').size()
+      );
+
+      $("span.col").text( parseInt($("span.col").text()) +
+        $('input[name="q4"][value="B"]:checked').size() +
+        $('input[name="q6"][value="B"]:checked').size() +
+        $('input[name="q7"][value="B"]:checked').size() +
+        $('input[name="q9"][value="A"]:checked').size() +
+        $('input[name="q10"][value="B"]:checked').size() +
+        $('input[name="q13"][value="B"]:checked').size() +
+        $('input[name="q16"][value="A"]:checked').size() +
+        $('input[name="q17"][value="B"]:checked').size()
+      );
+
+      $("span.com").text( parseInt($("span.com").text()) +
+        $('input[name="q2"][value="A"]:checked').size() +
+        $('input[name="q5"][value="A"]:checked').size() +
+        $('input[name="q8"][value="A"]:checked').size() +
+        $('input[name="q10"][value="A"]:checked').size() +
+        $('input[name="q11"][value="B"]:checked').size() +
+        $('input[name="q13"][value="A"]:checked').size() +
+        $('input[name="q18"][value="B"]:checked').size() +
+        $('input[name="q20"][value="B"]:checked').size()
+      );
+
+      var max = Math.max( parseInt($("span.avo").text()),
+                          parseInt($("span.for").text()),
+                          parseInt($("span.acc").text()),
+                          parseInt($("span.col").text()),
+                          parseInt($("span.com").text()) );
+
+      $("#" + $("#response span:contains('"+max+"')").attr("class")).show();
+
+      $("form.survey").hide();
+      $("#response").fadeIn("slow");
+    }
+
+
+    
+
+    event.preventDefault();
+  });
+});
+</script>
+</body>
+</html>
